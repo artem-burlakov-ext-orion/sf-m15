@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>Как устроен API</title>
+{% endblock %}
+{% block content %}
+<br>
+    <div class="bg-secondary">
+      <h3>API конкретной статьи блога</<h3>
+    </div>
+    <div class="pl-5">
+      <p>
+        .../api/posts/&lt;pk&gt;
+      </p>
+      <p>
+         где &lt;pk&gt; - это номер искомой статьи
+      </p>
+    </div>
+
+    <div class="bg-secondary">
+      <h3>API для всех статей блога</h3>
+    </div>
+    <div class="pl-5">
+      <p>
+        .../api/posts/
+      </p>
+    </div>
+    <div class="bg-secondary">
+      <h3>API категорий</<h3>
+    </div>
+    <div class="pl-5">
+      <p>
+        .../api/category/&lt;slug&gt;/
+      </p>
+      <p>
+        где &lt;slug&gt; - это искомая категория
+      </p>
+    </div>
+
+
+{% endblock %}

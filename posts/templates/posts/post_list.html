@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>Все статьи</title>
+{% endblock %}
+{% block content %}
+<br>
+{% for pub in posts %}
+    <div class="bg-secondary">
+    <h2>{{ pub.title }}</h2>
+    </div>
+    <p>
+      {{ now }}
+        Публикация {{ pub.author }} от {{ pub.when_published }}
+        Категория:
+         <a class="btn btn-outline-success" href="{% url 'posts_with_one_category' cat=pub.category %}" role="button">{{ pub.category }}</a>
+    </p>
+    <br>
+    {{ pub.body|truncatewords:10|linebreaks }}
+{% empty %}
+    <h2>Публикаций нет</h2>
+    
+{% endfor %}
+{% endblock %}
