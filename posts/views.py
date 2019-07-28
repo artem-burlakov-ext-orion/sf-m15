@@ -42,6 +42,7 @@ class AboutApiListView(ListView):
 
 def json_list_published_posts(request):
     posts = Post.objects.filter(status='published')
+    1/0
 
     return JsonResponse(
         {

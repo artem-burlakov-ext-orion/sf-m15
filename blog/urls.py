@@ -24,7 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', PostsListView.as_view(), name='main'),
     path('category/<cat>/', PostsListOneCategoryView.as_view(), name='posts_with_one_category'),
-    # path('api/posts/', json_list_published_posts),
+    path('api-old/posts/', json_list_published_posts),
     path('api/posts/', api_views.PostListView.as_view(), name='api_post_list'),
     path('api/posts/<pk>', api_views.PostDetailView.as_view(), name='api_post_detail'),
     path('api/category/<slug>/', api_views.PostListViewOneCategory.as_view(), name='api_category_list'),
