@@ -14,29 +14,29 @@ class PostsListView(ListView):
     context_object_name = 'posts'
     template = 'posts/post_list.html'
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['categories'] = Category.objects.all()
-        return context
+
 
 class PostsListOneCategoryView(ListView):
-
     context_object_name = 'posts'
     template = 'posts/post_list.html'
 
     def get_queryset(self,**kwargs):
         cat = self.kwargs['cat']
-        return Post.objects.filter(category=cat)
+        slug = Category.objects.get(title=cat).slug
+        return Post.objects.filter(category__slug=slug)
 
 
-# def about_api(request):
-#
-#     return render(request,'posts/api.html')
+
 
 class AboutApiListView(ListView):
     queryset = Category.objects.all()
     context_object_name = 'categories'
     template_name = 'posts/api.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['posts'] = Post.objects.filter(status='published')
+        return context
 
 
 

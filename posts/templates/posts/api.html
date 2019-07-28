@@ -14,6 +14,13 @@
       <p>
          где &lt;pk&gt; - это номер искомой статьи
       </p>
+      список статей:
+       <ul>
+         {% for post in posts %}
+           <li>{{ post.id }}</li>
+         {% endfor %}
+
+       </ul>
     </div>
 
     <div class="bg-secondary">
@@ -21,7 +28,7 @@
     </div>
     <div class="pl-5">
       <p>
-        <a href="https://github.com/eifory/sf-m15/api/posts/">https://github.com/eifory/sf-m15/api/posts/</a>
+        <a href="https://radiant-gorge-69659.herokuapp.com/api/posts/">https://radiant-gorge-69659.herokuapp.com/api/posts/</a>
       </p>
     </div>
     <div class="bg-secondary">
