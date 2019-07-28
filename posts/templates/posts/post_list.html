@@ -12,12 +12,12 @@
       {{ now }}
         Публикация {{ pub.author }} от {{ pub.when_published }}
         Категория:
-         <a class="btn btn-outline-success" href="{% url 'posts_with_one_category' cat=pub.category %}" role="button">{{ pub.category }}</a>
+         <a class="btn btn-outline-success" href="{% url 'posts_with_one_category' cat=pub.category__slug%}" role="button">{{ pub.category }}</a>
     </p>
     <br>
     {{ pub.body|truncatewords:10|linebreaks }}
 {% empty %}
     <h2>Публикаций нет</h2>
-    
+
 {% endfor %}
 {% endblock %}
