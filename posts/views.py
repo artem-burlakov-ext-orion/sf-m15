@@ -26,8 +26,7 @@ class PostsListOneCategoryView(ListView):
 
     def get_queryset(self,**kwargs):
         cat = self.kwargs['cat']
-        # slug = Category.objects.get(title=cat).slug
-        return Post.objects.filter(category__slug=cat)
+        return Post.objects.filter(category=cat)
 
 
 # def about_api(request):
