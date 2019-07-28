@@ -34,15 +34,14 @@
       <p>
         где &lt;slug&gt; - это искомая категория
       </p>
+       список категорий:
         <ul>
           {% for category in categories %}
-            <li>category></li>
+            <li>{{ category.slug }}></li>
           {% endfor %}
 
         </ul>
-      <p>
-        список категорий:
-      </p>
+
     </div>
 
 

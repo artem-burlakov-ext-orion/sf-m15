@@ -37,7 +37,7 @@ class PostsListOneCategoryView(ListView):
 class AboutApiListView(ListView):
     queryset = Category.objects.all()
     context_object_name = 'categories'
-    template = 'posts/api.html'
+    template_name = 'posts/api.html'
 
 
 
