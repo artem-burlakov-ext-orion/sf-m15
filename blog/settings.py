@@ -25,7 +25,7 @@ SECRET_KEY = '4h=!w=4zdl&e0s&nb4+=wcvbom-2g2^t-7jh_p9p62_)x2h__('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://radiant-gorge-69659.herokuapp.com']
+ALLOWED_HOSTS = ['radiant-gorge-69659.herokuapp.com']
 
 
 # Application definition
