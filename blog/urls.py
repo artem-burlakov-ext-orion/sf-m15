@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from posts.views import PostsListView, json_list_published_posts, PostsListOneCategoryView, about_api
+from posts.views import PostsListView, json_list_published_posts, PostsListOneCategoryView, AboutApiListView
 from posts.api import views as api_views
 
 
@@ -28,7 +28,7 @@ urlpatterns = [
     path('api/posts/', api_views.PostListView.as_view(), name='api_post_list'),
     path('api/posts/<pk>', api_views.PostDetailView.as_view(), name='api_post_detail'),
     path('api/category/<slug>/', api_views.PostListViewOneCategory.as_view(), name='api_category_list'),
-    path('about_api/', about_api, name='api')
+    path('about_api/', AboutApiListView.as_view(), name='api')
     # path('api/posts/category/<pk>', api_views.CategoryListView.as_view(), name='api_category_list' )
 
 ]

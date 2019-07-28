@@ -30,11 +30,14 @@ class PostsListOneCategoryView(ListView):
         return Post.objects.filter(category__slug=slug)
 
 
-def about_api(request):
-    return render(request,'posts/api.html')
+# def about_api(request):
+#
+#     return render(request,'posts/api.html')
 
-
-
+class AboutApiListView(ListView):
+    queryset = Category.objects.all()
+    context_object_name = 'categories'
+    template = 'posts/api.html'
 
 
 
