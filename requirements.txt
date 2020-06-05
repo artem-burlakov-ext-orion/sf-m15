@@ -1,5 +1,5 @@
 certifi==2019.6.16
-Django==2.1.5
+Django==2.2.13
 djangorestframework==3.9.1
 pytz==2019.1
 sentry-sdk==0.10.2
